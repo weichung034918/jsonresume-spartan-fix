@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
-const server = express();
 const {exec} = require('child_process');
-const async = require('async')
+const async = require('async');
 const port = 6969;
 
+
+const server = express();
 
 server.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname, './public/index.html'));

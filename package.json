@@ -8,8 +8,7 @@
     "url": "https://github.com/francescoes/jsonresume-theme-spartan"
   },
   "scripts": {
-    "serve": "nodemon ./server.js",
-    "monitor": "browser-sync start --proxy localhost:6969 --files=**/*  --ignore=node_modules --reload-delay 10000 --no-ui --no-inject-changes",
+    "start": "gulp nodemon",
     "build": "resume export --theme . ./public/index.html",
     "help": "resume --help"
   },
@@ -21,7 +20,11 @@
     "handlebars": ">=4.5.3",
     "moment": ">=2.24.0",
     "nodemon": "^2.0.7",
-    "path": "^0.12.7",
-    "resume-cli": "^3.0.0"
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-nodemon": "^2.5.0",
+    "resume-cli": "^3.0.4"
   }
 }

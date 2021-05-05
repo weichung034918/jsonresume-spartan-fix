@@ -1,0 +1,135 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Lee Wei Chung",
+    "label": "Full Stack Developer",
+    "image": "",
+    "email": "weichungleee@gmail.com",
+    "phone": "+60 18 258 4318",
+    "location": {
+      "address": "Kuala Lumpur",
+      "countryCode": "MY"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "weichungleee",
+        "url": "https://my.linkedin.com/in/weichungleee"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Convoy (Malaysia)",
+      "description": "Financial advisory expanding to become a diversified business encompassing a financial business services platform, FinTech, healthcare and retail.",
+      "position": "Senior Full Stack Developer",
+      "url": "https://convoy.com.hk",
+      "startDate": "2020-04",
+      "summary": "Begin to work on more complicated tasks.",
+      "highlights": [
+        "Develop multiple modules in a dashboard using Spring MVC with combination of Bootstrap and Javascript.",
+        "Sync data between two systems."
+      ]
+    },
+    {
+      "company": "Convoy (Malaysia)",
+      "description": "Financial advisory expanding to become a diversified business encompassing a financial business services platform, FinTech, healthcare and retail.",
+      "position": "Full Stack Developer",
+      "url": "https://convoy.com.hk",
+      "startDate": "2018-10",
+      "endDate": "2020-03",
+      "summary": "",
+      "highlights": [
+        "Enhance Content Management System.",
+        "Implement and design MySql database."
+      ]
+    },
+    {
+      "company": "Formis Computer Service",
+      "description": "Subsidary of Microlink Solutions Group.",
+      "position": "Intern as Software Developer",
+      "startDate": "2017-08",
+      "endDate": "2017-11",
+      "summary": "Develop web pages and explore frameworks.",
+      "highlights": [
+        "Develop multiple modules of dashboard using <b>Spring MVC</b> with combination of <b>Bootstrap</b> and <b>Javascript</b>.",
+        "Implement and design database tables on <b>MySql</b>."
+      ]
+    },
+    {
+      "company": "Swisschip Sdn Bhd",
+      "description": "Web Platform Provider for hosting games.",
+      "position": "Junior Java Developer",
+      "startDate": "2016-06",
+      "endDate": "2016-09",
+      "summary": "First Contact of <b>Java Spring</b>, <b>Hibernate</b> and MVC patterns",
+      "highlights": [
+        "Develop <b>.jsp</b> pages for promotions/events using <b>Struts 2</b>, <b>Spring</b>, and <b>Hibernate</b>.",
+        "Develop new RMI services of <b>Java</b> and <b>Spring Hibernate</b> Stack.",
+        "Resigned to pursue degree."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Asia Pacific University",
+      "url": "https://www.apu.edu.my/",
+      "area": "Information Technology",
+      "studyType": "Bsc. (HONS) In Software Engineering",
+      "startDate": "2016-09",
+      "endDate": "2018-09",
+      "cgpa": "3.38"
+    },
+    {
+      "institution": "Asia Pacific University",
+      "url": "https://www.apu.edu.my/",
+      "area": "Information Technology",
+      "studyType": "Diploma in Information Technology (Software Engineering)",
+      "startDate": "2014-05",
+      "endDate": "2016-05",
+      "cgpa": "3.47"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Frontend",
+      "level": "Intermediate",
+      "keywords": [
+        "Angular",
+        "React",
+        "Redux + Thunk",
+        "CSS"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "level": "Advanced",
+      "keywords": [
+        "Spring Boot",
+        "Java",
+        "SQL",
+        "Scala",
+        "Spring"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Chinese",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Full Professional"
+    },
+    {
+      "language": "Malay",
+      "fluency": "Professional Working"
+    }
+  ],
+  "references": [
+    {
+      "name": "Could provide upon request."
+    }
+  ]
+}

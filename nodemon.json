@@ -1,0 +1,10 @@
+{
+    "verbose":true,
+    "ignore": ["node_modules"],
+    "watch":[
+        "public/**/*",
+        "server.js",
+        "resume.hbs",
+        "resume.json"
+    ]
+}

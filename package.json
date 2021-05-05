@@ -5,11 +5,14 @@
   "author": "Francesco Esposito <fraesps@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/francescoes/jsonresume-theme-spartan"
+    "url": "https://github.com/francescoes/jsonresume-theme-spartan",
+    "serve":"nodemon ./server.js",
+    "monitor":"browser-sync start --proxy localhost:6969 --files=**/*  --ignore=node_modules --reload-delay 10000 --no-ui --no-inject-changes"
   },
   "license": "MIT",
   "dependencies": {
     "handlebars": ">=4.5.3",
-    "moment": ">=2.24.0"
+    "moment": ">=2.24.0",
+    "resume-cli": "^3.0.0"
   }
 }

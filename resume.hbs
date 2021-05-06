@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
 	<style>
+		{{{bootstrapCss}}}
 		{{{css}}}
 	</style>
 
@@ -26,87 +27,64 @@
 							<h2 class="label">{{label}}</h2>
 						</div>
 					{{/if}}
-
-				</header>
-
-				<section id="basics">
-
 					{{#location}}
-						<div id="location">
+						<div id="location" class="col">
 							{{#if address}}
-							<span class="fa fa-map-marker"></span>
-							<span class="address">
-								{{address}},
-							</span>
-							{{/if}}
-							{{#if postalCode}}
-							<span class="postalCode">
-								{{postalCode}},
-							</span>
-							{{/if}}
-							{{#if city}}
-							<span class="city">
-								{{city}}
-							</span>
-							{{/if}}
-							{{#if countryCode}}
-							<span class="countryCode">
-								({{countryCode}}),
-							</span>
-							{{/if}}
-							{{#if region}}
-							<span class="region">
-								{{region}}
-							</span>
+								{{!-- <span class="fa fa-map-marker"></span> --}}
+								<span class="address">
+									{{{address}}}{{#if postalCode}}, {{{postalCode}}}{{/if}}{{#if city}}, {{{city}}}{{/if}}{{#if countryCode}}, ({{{countryCode}}}){{/if}}{{#if region}}, {{{region}}}{{/if}}
+								</span>
 							{{/if}}
 						</div>
 					{{/location}}
-
-					<div id="contact">
-						{{#if website}}
-						<div class="website">
-							<a href="{{website}}">{{website}}</a>
+				</header>
+				{{!-- <hr/> --}}
+				<section id="basics" class="row">
+					{{#if website}}
+						<div id="contact" class="col">
+								<div class="website">
+									<a href="{{website}}">{{website}}</a>
+								</div>
 						</div>
-						{{/if}}
-						{{#if email}}
-						<div class="email">
-							<span class="fa fa-envelope"></span>
-							<a href="mailto:{{email}}">{{email}}</a>
+					{{/if}}
+					{{#if email}}
+						<div class="col">
+							<div class="email">
+								<span class="fa fa-envelope"></span>
+								<a href="mailto:{{email}}">{{email}}</a>
+							</div>
+						</div>	
+					{{/if}}
+					{{#if phone}}
+						<div class="col">
+								<div class="phone">
+									<span class="fa fa-phone-square"></span>
+									{{phone}}
+								</div>
 						</div>
-						{{/if}}
-						{{#if phone}}
-						<div class="phone">
-							<span class="fa fa-phone-square"></span>
-							{{phone}}
-						</div>
-						{{/if}}
-					</div>
-
-
+					{{/if}}
 					{{#if profiles.length}}
-					<div id="profiles">
-						{{#each profiles}}
-						<div class="item">
-							{{#if network}}
-							<span class="network fa fa-{{spaceToDash network}} {{spaceToDash network}}"></span>
-							{{/if}}
-							{{#if username}}
-							<span class="username">
-								{{#if url}}
-								<span class="url">
-									<a href="{{url}}">{{username}}</a>
-								</span>
-								{{else}}
-									{{username}}
-								{{/if}}
-							</span>
-							{{/if}}
+						<div id="profiles" class="col">
+							{{#each profiles}}
+								<div>
+									{{#if network}}
+									<span class="network fa fa-{{spaceToDash network}} {{spaceToDash network}}"></span>
+									{{/if}}
+									{{#if username}}
+									<span class="username">
+										{{#if url}}
+											<a href="{{url}}">{{username}}</a>
+										{{else}}
+											{{username}}
+										{{/if}}
+									</span>
+									{{/if}}
+								</div>
+							{{/each}}
 						</div>
-						{{/each}}
-					</div>
 					{{/if}}
 				</section>
-
+				<hr/>
 				{{#if summary}}
 				<section class="section main-summary">
 					<h2 class='section-title'>About</h2>
@@ -120,60 +98,66 @@
 			{{/resume.basics}}
 
 			{{#if resume.work.length}}
-				<section class="section">
-					<h2 class='section-title'>Experience</h2>
-					<section id="work">
+				<section class="section row">
+					<div class="col-3">
+						<h2 class='section-title'>Experience</h2>
+					</div>
+					<section id="work" class="col-9">
 					{{#each resume.work}}
 						{{#if company}}
-						<header>
-							<h3 class="name">
+						<header class="row">
+							<div class="col">
+								<h3 class="name">
 								{{company}}
 							</h3>
+							</div>
 							{{/if}}
-							<div class="date">
+							<div class="date col">
 								{{#if startDate}}
-								<span class="startDate">
-									{{MY startDate}}
-								</span>
+									<span class="startDate">
+										{{MY startDate}}
+									</span>
 								{{/if}}
 								{{#if endDate}}
-								<span class="endDate">
-									- {{MY endDate}}
-								</span>
+									<span class="endDate">
+										- {{MY endDate}}
+									</span>
 								{{else}}
-								<span class="endDate">
-									- Present
-								</span>
+									<span class="endDate">
+										- Present
+									</span>
 								{{/if}}
 							</div>
 						</header>
 						<div class="item">
-						{{#if position}}
-						<div class="position">
-							{{position}}
+							{{#if position}}
+							<div class="position">
+								{{position}}
+							</div>
+							{{/if}}
+							{{#if website}}
+							<div class="website">
+								<a href="{{website}}">{{website}}</a>
+							</div>
+							{{/if}}
+							{{#if summary}}
+							<div class="summary">
+								<p>{{{summary}}}</p>
+							</div>
+							{{/if}}
+							{{#if highlights.length}}
+							<ul class="highlights">
+								{{#each highlights}}
+								<li>{{{this}}}</li>
+								{{/each}}
+							</ul>
+							{{/if}}
+							 {{#if @last}}{{else}}<hr/>{{/if}}  
 						</div>
-						{{/if}}
-						{{#if website}}
-						<div class="website">
-							<a href="{{website}}">{{website}}</a>
-						</div>
-						{{/if}}
-						{{#if summary}}
-						<div class="summary">
-							<p>{{{summary}}}</p>
-						</div>
-						{{/if}}
-						{{#if highlights.length}}
-						<ul class="highlights">
-							{{#each highlights}}
-							<li>{{{this}}}</li>
-							{{/each}}
-						</ul>
-						{{/if}}
-					</div>
 					{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.education.length}}
@@ -232,6 +216,7 @@
 						{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 
@@ -289,6 +274,7 @@
 						{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.awards.length}}
@@ -321,6 +307,7 @@
 					{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.publications.length}}
@@ -359,6 +346,7 @@
 						{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.skills.length}}
@@ -389,6 +377,7 @@
 						{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.languages.length}}
@@ -411,6 +400,7 @@
 						{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.interests.length}}
@@ -435,6 +425,7 @@
 						{{/each}}
 					</section>
 				</section>
+				<hr/>
 			{{/if}}
 
 			{{#if resume.references.length}}

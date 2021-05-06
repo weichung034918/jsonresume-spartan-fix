@@ -10,7 +10,8 @@
   "scripts": {
     "start": "gulp nodemon",
     "build": "resume export --theme . ./public/index.html",
-    "help": "resume --help"
+    "help": "resume --help",
+    "serve":"resume serve --theme ."
   },
   "license": "MIT",
   "dependencies": {
@@ -25,6 +26,6 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-nodemon": "^2.5.0",
-    "resume-cli": "^3.0.4"
+    "resume-cli": "3.0.0"
   }
 }

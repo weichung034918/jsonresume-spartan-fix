@@ -417,8 +417,10 @@
 
 			{{#if resume.interests.length}}
 				<section class="section row">
-					<h2 class='section-title'>Interests</h2>
-					<section id="interests">
+					<div class="col-2">
+						<h2 class='section-title'>Interests</h2>
+					</div>
+					<section id="interests" class="col-10">
 						{{#each resume.interests}}
 						<div class="item">
 							{{#if name}}

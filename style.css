@@ -29,7 +29,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	/* list-style: none; */
 }
 blockquote, q {
 	quotes: none;
@@ -60,9 +60,9 @@ table {
 em {
 	color: #757575;
 }
-p {
+/* p {
 	margin: 1em 0;
-}
+} */
 blockquote {
 	margin: 0;
 	margin-bottom: 1em;
@@ -72,7 +72,7 @@ strong {
 	font-size: 1.1em;
 }
 ul {
-	margin-top: 1em;
+	margin-top: 0.5em;
 }
 div.item {
 	margin: 1em 0 0.5em;
@@ -116,7 +116,7 @@ body {
 }
 
 #resume {
-	padding: 1rem 0;
+	/* padding: 1rem 0; */
 	margin: 1rem auto;
 }
 
@@ -151,12 +151,13 @@ header .label {
 	color: #757575;
 }
 
-section:not(.section) {
+/* section:not(.section) {
 	padding: .5em 1rem;
-}
+} */
 
 section#references {
-	border-bottom:none;
+	border-bottom:none;    
+	padding: 0.5em 0;
 }
 
 section#basics {
@@ -167,7 +168,7 @@ section#basics {
 section#education,
 section#work,
 .main-summary section {
-	padding-bottom: 1em;
+	padding: 0.5em 0;
 }
 
 header::after {
@@ -181,13 +182,15 @@ h2.section-title {
 	font-size: 1rem;
 	font-weight: 400;
 	color: #757575;
-	padding: 1em 1rem 0;
-	margin-bottom: 0.1275em;
+	padding: 0.25em 0;
+	/*margin-bottom: 0.1275em; */
 }
 
 .date {
+	text-align: end;
 	font-weight: 700;
 	color: #757575;
+    line-height: 1;
 }
 
 .position, .area, .institution {
@@ -462,25 +465,26 @@ h2.section-title {
 
 	section > header {
 		line-height: 1;
-		padding-bottom: 1em;
+		padding-bottom: 0.5em;
 		width: 99%;
+		/* padding-top: 0.5em; */
 	}
 
 	h2.section-title {
 		line-height: 1;
-		padding-top: 0;
+		/* padding-top: 0; */
 	}
 
-	section:not(.section) {
+	/* section:not(.section) {
 		width: 34.5em;
 		padding: 0 0.5em 0.5em 0;
 		margin-top:0;
 		border: none;
-	}
+	} */
 
-	section p {
+	/* section p {
 		margin: 0;
-	}
+	} */
 
 	section#basics {
 		width: auto;
@@ -517,12 +521,36 @@ h2.section-title {
 
 hr {
 	margin: 0;
+    /* width: 101%; */
 }
 
 .highlights{
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.5em;
 }
 
 .institution{
 	line-height: 1;
+}
+div > .row {
+	padding-top: 0.5em;
+}
+@page {
+	size: A4;
+	margin: 0;
+  }
+  
+@media print {
+	html, body {
+		/* width: 98%;     */
+		margin: 1% 2%;  
+	}
+	/* .resume {
+		border: initial;
+		border-radius: initial;
+		width: initial;
+		min-height: initial;
+		box-shadow: initial;
+		background: initial;
+		page-break-after: always;
+	} */
 }

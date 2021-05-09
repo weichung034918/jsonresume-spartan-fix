@@ -10,6 +10,7 @@
   "scripts": {
     "start": "gulp nodemon --verbose",
     "build": "resume export --theme . ./public/index.html",
+    "export:pdf": "resume export --theme . --format pdf ./public/resume.pdf",
     "help": "resume --help",
     "serve": "resume serve --theme ."
   },

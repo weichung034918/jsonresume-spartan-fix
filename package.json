@@ -12,7 +12,8 @@
     "build": "resume export --theme . ./public/index.html",
     "export:pdf": "resume export --theme . --format pdf ./public/resume.pdf",
     "help": "resume --help",
-    "serve": "resume serve --theme ."
+    "serve": "resume serve --theme .",
+    "init": "resume init"
   },
   "license": "MIT",
   "dependencies": {

@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const {exec} = require('child_process');
 const async = require('async');
-const port = 6969;
 const fs = require("fs");
 const fsp = fs.promises;
 
 const server = express();
 const publicPath = './public';
+const port = 6969;
 
 server.get('/', (req,res)=>{
     res.sendFile(path.join(__dirname, './public/index.html'));
